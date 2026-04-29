@@ -1,0 +1,506 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
+  color: white;
+  line-height: 1.6;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 8%;
+  backdrop-filter: blur(12px);
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+}
+.logo a {
+  text-decoration: none;
+}
+
+.logo h2 {
+  color: white;
+}
+
+.logo span {
+  color: cyan;
+}
+/* LINKS */
+#nav-links {
+  display: flex;
+  gap: 28px;
+  list-style: none;
+}
+
+#nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s ease;
+}
+
+#nav-links a:hover {
+  color: cyan;
+}
+
+/* ================= HAMBURGER ================= */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 26px;
+  height: 3px;
+  background: white;
+  border-radius: 2px;
+}
+.menu-toggle.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.menu-toggle span {
+  transition: 0.3s ease;
+}
+
+
+/* ================= HERO ================= */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 8%;
+}
+
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+
+/* TEXT */
+.content {
+  max-width: 520px;
+}
+
+.intro {
+  color: cyan;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 1.2;
+}
+
+h1 span {
+  color: cyan;
+  text-shadow: 0 0 15px cyan;
+}
+h2 {
+  color: cyan;
+  margin-bottom: 30px;
+  padding: 5px 15px;
+  border-radius: 8px;
+  display: inline-block;
+  transition: 0.3s ease;
+  border: 2px solid transparent;
+
+}
+h2:hover {
+  font-weight: 700;
+  color:cyan;
+  text-shadow: 0 0 10px cyan,
+               0 0 20px cyan,
+               0 0 40px cyan;
+  transform: scale(1.05);
+  border: 2px solid cyan;
+}
+
+/* typing */
+.typing {
+  margin-top: 15px;
+  font-size: 16px;
+  max-width: 450px;
+  color: #ddd;
+  border-right: 2px solid cyan;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 3s steps(60) forwards, blink 0.7s infinite;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+
+/* BUTTONS */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 22px;
+  border: 2px solid cyan;
+  border-radius: 25px;
+  color: cyan;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+/* glow effect */
+.btn:hover {
+  background: cyan;
+  color: black;
+  box-shadow: 0 0 10px cyan, 0 0 25px cyan, 0 0 40px cyan;
+  transform: scale(1.05);
+}
+
+/* PROFILE */
+.profile img {
+  width: 45%;
+  max-width: 280px;
+  height: auto;
+  justify-content: right;
+  border-radius: 50%;
+  border: 3px solid cyan;
+  object-fit: cover;
+  box-shadow: 0 0 25px cyan;
+  animation: float 2.5s ease-in-out infinite;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+.profile img:hover{
+  transform: scale(1.1) rotate(2deg);
+   box-shadow:0 0 40px cyan;
+   filter: brightness(1.1);
+}
+.profile{
+flex: 1;
+display: flex;
+justify-content: flex-end;
+}
+
+/* ================= SECTIONS ================= */
+.projects,
+.skills,
+.achievements,
+.contact {
+  padding: 90px 8%;
+  text-align: center;
+}
+/* ================= PROJECTS ================= */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+.card h3 {
+  transition: 0.3s ease;
+}
+
+.card:hover h3 {
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+/* ================= SKILLS ================= */
+.skill-card {
+  max-width: 600px;
+  margin: auto;
+  background: #0a0a0a;
+  padding: 25px;
+  border-radius: 18px;
+  box-shadow: 0 0 25px cyan;
+   transition: 0.3s ease;
+}
+
+.skill-top {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.skill-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 30px cyan;
+}
+.skill {
+  transition: 0.3s ease;
+  padding: 5px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+}
+
+.skill:hover {
+  transform: translateX(6px);
+  background: rgba(0, 255, 255, 0.05);
+}
+
+.skill:hover .bar {
+  box-shadow: 0 0 10px cyan;
+}
+.skill-top span {
+  transition: 0.3s ease;
+}
+
+.skill:hover .skill-top span {
+  color: cyan;
+  text-shadow: 0 0 8px cyan;
+}
+
+.bar {
+  height: 10px;
+  background: #222;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, cyan, #00f7ff);
+  animation: fillBar 2s forwards;
+}
+
+@keyframes fillBar {
+  to { width: var(--width); }
+}
+
+/* ================= ACHIEVEMENTS ================= */
+.achievements-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+.card,
+.achievement-card {
+  background: #111;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px cyan;
+  transition: 0.3s ease;
+}
+
+.achievement-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.achievement-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 0 25px cyan;
+}
+
+.achievement-card:hover h3 {
+  color: cyan;
+  text-shadow: 0 0 10px cyan;
+}
+
+/* ================= CONTACT ================= */
+.contact {
+  background: #0f172a;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.contact-info {
+  max-width: 350px;
+  text-align: left;
+}
+
+.contact-info p {
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #ccc;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 320px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  border: 2px solid cyan;
+  border-radius: 10px;
+  background: transparent;
+  color: white;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: cyan;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  box-shadow: 0 0 15px cyan;
+}
+
+/* ================= Desktop ================= */
+
+@media (max-width: 1024px) {
+  .menu-toggle {
+    display: flex;
+  }
+
+  #nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.95);
+    flex-direction: column;
+    text-align: center;
+    padding: 20px 0;
+  }
+
+  #nav-links.active {
+    display: flex;
+  }
+
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+              /* tablets */
+ @media (max-width: 1024px) and (min-width: 769px) {
+
+  /* HERO LAYOUT */
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  /* TEXT SIZE */
+  h1 {
+    font-size: 42px;
+  }
+
+  .typing {
+    font-size: 15px;
+  }
+
+  /* PROFILE IMAGE */
+  .profile img {
+    width: 240px;
+    height: 240px;
+  }
+
+  /* NAV SPACING */
+  #nav-links {
+    gap: 18px;
+  }
+
+  /* CARDS */
+  .cards-container,
+  .achievements-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+            /* mobile */
+@media (max-width: 768px) {
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .typing {
+    font-size: 14px;
+  }
+
+  .profile img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .hero-container {
+    gap: 25px;
+  }
+
+  .cards-container,
+  .achievements-container {
+    grid-template-columns: 1fr;
+  }
+}
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.6s ease;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
