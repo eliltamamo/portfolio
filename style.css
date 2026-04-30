@@ -16,7 +16,7 @@ body {
   line-height: 1.6;
 }
 
-/* ================= NAVBAR ================= */
+ /* NAVBAR  */
 nav {
   position: fixed;
   top: 0;
@@ -59,7 +59,7 @@ nav {
   color: cyan;
 }
 
-/* ================= HAMBURGER ================= */
+/* HAMBURGER  */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -89,8 +89,7 @@ nav {
   transition: 0.3s ease;
 }
 
-
-/* ================= HERO ================= */
+/* HERO  */
 .hero {
   height: 100vh;
   display: flex;
@@ -219,7 +218,7 @@ display: flex;
 justify-content: flex-end;
 }
 
-/* ================= SECTIONS ================= */
+/* SECTIONS  */
 .projects,
 .skills,
 .achievements,
@@ -227,7 +226,7 @@ justify-content: flex-end;
   padding: 90px 8%;
   text-align: center;
 }
-/* ================= PROJECTS ================= */
+/* PROJECTS  */
 .cards-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -254,7 +253,7 @@ justify-content: flex-end;
   text-shadow: 0 0 10px cyan;
 }
 
-/* ================= SKILLS ================= */
+/* SKILLS */
 .skill-card {
   max-width: 600px;
   margin: auto;
@@ -319,7 +318,7 @@ justify-content: flex-end;
   to { width: var(--width); }
 }
 
-/* ================= ACHIEVEMENTS ================= */
+/* ACHIEVEMENTS  */
 .achievements-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -352,7 +351,7 @@ justify-content: flex-end;
   text-shadow: 0 0 10px cyan;
 }
 
-/* ================= CONTACT ================= */
+/* CONTACT */
 .contact {
   background: #0f172a;
 }
@@ -404,7 +403,7 @@ justify-content: flex-end;
   box-shadow: 0 0 15px cyan;
 }
 
-/* ================= Desktop ================= */
+/* Desktop  */
 
 @media (max-width: 1024px) {
   .menu-toggle {
@@ -462,7 +461,7 @@ justify-content: flex-end;
     gap: 18px;
   }
 
-  /* CARDS */
+       /* CARDS */
   .cards-container,
   .achievements-container {
     grid-template-columns: repeat(2, 1fr);
